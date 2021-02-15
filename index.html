@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      #main {
+        text-align: center;
+        font-family: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
+        color: rgb(45, 128, 128);
+      }
+      #container {
+        width: auto;
+        margin: auto;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #842390;
+        margin-top: 10px;
+        padding: 5px;
+      }
+      button {
+        background-color: darkslateblue;
+        font-size: large;
+        color: antiquewhite;
+      }
+      #ip {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h1>ALL ABOUT ICE AND FIRE</h1>
+      <button type="button" id="button1" onclick="displayBooks(1)">
+        BOOKS
+      </button>
+      <button type="button" id="button2" onclick="displayCharacters()">
+        CHARACTERS
+      </button>
+      <button type="button" id="button3" onclick="displayHouses()">
+        HOUSES
+      </button>
+      <br /><br />
+      <input
+        id="numberip"
+        type="number"
+        placeholder="page number"
+        min="1"
+        max="2"
+        oninput="displayPage()"
+      />
+      <input
+        id="characterNum"
+        type="number"
+        placeholder="specific character"
+        oninput="displayCharacter(this.value)"
+      />
+      <input
+        id="houseNum"
+        type="number"
+        placeholder="specific house"
+        oninput="displayHouse(this.value)"
+      />
+    </div>
+    <div id="container"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
